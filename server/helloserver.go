@@ -20,7 +20,7 @@ func (h *HelloServer) Hello(ctx context.Context, request *pb.HelloRequest) (*pb.
 		return nil, errors.New("Didn't receive a name")
 	}
 
-	fmt.Printf("Received a hello from %v. Sending a kind reply :)\n", pr.Addr)
+	fmt.Printf("Received a hello from %v at %v. Sending a kind reply :)\n", name, pr.Addr)
 	response := &pb.HelloResponse{
 		Reply: fmt.Sprintf("Hello %v! Nice to meet you :)", name),
 	}
