@@ -1,5 +1,4 @@
 syntax = "proto3";
-package demo;
 
 option go_package = "github.com/khyew/grpc-talk";
 
