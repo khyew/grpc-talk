@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/khyew/grpc-talk";
+
+service DemoService {
+/* Hello responds with a custom server greeting with info from request */
+    rpc Hello(HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+    string name = 1;
+    bytes picture = 2;
+}
+
+message HelloResponse {
+    string reply = 1;
+}
